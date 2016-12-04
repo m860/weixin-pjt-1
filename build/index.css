@@ -1,0 +1,53 @@
+html, body {
+  font-size: 62.5%;
+  height: 100%; }
+
+button {
+  outline: none; }
+
+.black-button, .right-button {
+  background-color: white;
+  border: solid 3px black;
+  color: black; }
+
+.green-button {
+  background-color: white;
+  border: solid 3px green;
+  color: green; }
+
+.white-button {
+  background-color: white;
+  border: solid 3px white;
+  color: white; }
+
+.right-button {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .loading .wrapper {
+    height: 100%;
+    display: table; }
+    .loading .wrapper .content {
+      display: table-cell;
+      vertical-align: middle;
+      color: white; }
+
+body {
+  background-image: url("../assets/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.i-will-join {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  text-align: center; }
