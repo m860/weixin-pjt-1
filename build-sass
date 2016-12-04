@@ -1,0 +1,1 @@
+node node_modules/node-sass/bin/node-sass styles/styles.sass -o build --output-style compressed -w
