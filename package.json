@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass":" node node_modules/node-sass/bin/node-sass styles/*.sass -o build/"
+    "build-sass":" node node_modules/node-sass/bin/node-sass styles/styles.sass -o build ----output-style compressed"
   },
   "repository": {
     "type": "git",
