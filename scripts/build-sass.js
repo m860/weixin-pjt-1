@@ -4,7 +4,7 @@
 var watch = require("node-watch");
 var path = require("path");
 var sass = require("node-sass");
-var fs=require("fs");
+var fs = require("fs");
 
 watchFolder = path.normalize(path.join(__dirname, '../styles/'));
 
@@ -18,6 +18,7 @@ var filter = function (pattern, fn) {
 	}
 }
 
+console.log('watching ' + watchFolder);
 watch(watchFolder, filter(/\.sass$/i, function (filename) {
 
 	newFilename = path.join(buildDir, path.basename(filename).replace('sass', 'css'));
@@ -26,10 +27,10 @@ watch(watchFolder, filter(/\.sass$/i, function (filename) {
 		file: filename,
 		outFile: newFilename,
 		outputStyle: 'compressed'
-	},function(err,result){
-		if(!err){
-			fs.writeFile(newFilename,result.css,function(err2){
-				if(!err2){
+	}, function (err, result) {
+		if (!err) {
+			fs.writeFile(newFilename, result.css, function (err2) {
+				if (!err2) {
 					console.log(filename + 'is builded');
 				}
 			});

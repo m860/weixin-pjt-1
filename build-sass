@@ -1,5 +1,0 @@
-node_modules/node-sass/bin/node-sass styles/styles.sass -o build --output-style compressed
-node_modules/node-sass/bin/node-sass styles/index.sass -o build --output-style compressed
-node_modules/node-sass/bin/node-sass styles/friends.sass -o build --output-style compressed
-node_modules/node-sass/bin/node-sass styles/splash.sass -o build --output-style compressed
-node_modules/node-sass/bin/node-sass styles/overlay.sass -o build --output-style compressed
