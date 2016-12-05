@@ -28,9 +28,16 @@ button
   color: green
 
 .white-button
-  background-color: white
+  background-color: black
   border: solid 3px white
   color: white
+  display: block
+  margin: 15px auto
+  font-size: 1.2rem
+  border-radius: 18px
+  padding: 10px 10px
+  width: 100px
+
 
 .right-button
   @extend .black-button
@@ -48,11 +55,16 @@ button
   border-radius: 50%
   border: solid 3px black
   background: url('../assets/music.png') no-repeat
+  background-size: 70%
+  background-position: center
+  background-color: gray
+
 
 .logo-button
   @extend .music-button
   left: 10px
   background: url('../assets/left-circle.png') no-repeat
+  background-position: center
 
 .refresh
   color: #2cb49b
