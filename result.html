@@ -7,8 +7,8 @@
     <title>Demo</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="build/styles.css">
-    <link rel="stylesheet" href="build/index.css">
     <link rel="stylesheet" href="build/overlay.css">
+    <link rel="stylesheet" href="build/result.css">
     <script>
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
                 ':35729/livereload.js?snipver=1"></' + 'script>')
@@ -16,27 +16,18 @@
 </head>
 <body>
 <button class="right-button">游戏规则</button>
-<div class="i-will-join">
+<div class="i-will-join" style="bottom:10px">
     <button class="black-button">我要参与</button>
+    <button class="black-button">关注我们</button>
 </div>
-<div class="overlay" style="display: none">
-    <div class="close">x</div>
-    <div class="tab-bar">
-        <div class="bar">
-            <div class="txt">活动规则</div>
-            <div class="cur"></div>
-        </div>
+<div class="result">
+    <img>
+    <div class="progress">
+        <div class="percent" style="width:80%"></div>
     </div>
-    <div class="tab-content">
-        <p>1. sdfsdfd</p>
-        <p>1. sdfsdfd</p>
-    </div>
-</div>
-<div class="loading" style="display: none">
-    <div class="loading-content">
-        <img src="assets/sand-glass.png">
-        <p>100%</p>
-    </div>
+    <p class="txt1">Ta已减油<span class="txt2">200</span>步</p>
+    <p class="txt3">剩余的分享出去邀请好友帮忙减油!</p>
+    <button class="refresh">刷新</button>
 </div>
 </body>
 </html>
