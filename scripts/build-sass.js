@@ -25,8 +25,8 @@ watch(watchFolder, filter(/\.sass$/i, function (filename) {
 
 	sass.render({
 		file: filename,
-		outFile: newFilename,
-		outputStyle: 'compressed'
+		outFile: newFilename
+		//,outputStyle: 'compressed'
 	}, function (err, result) {
 		if (!err) {
 			fs.writeFile(newFilename, result.css, function (err2) {
@@ -34,6 +34,9 @@ watch(watchFolder, filter(/\.sass$/i, function (filename) {
 					console.log(filename + 'is builded');
 				}
 			});
+		}
+		else {
+			console.error(err);
 		}
 	});
 

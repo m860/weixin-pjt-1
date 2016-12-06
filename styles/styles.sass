@@ -23,7 +23,7 @@ button
   padding: 5px 10px
   color: $color
   background-color: $bgColor
-  font-size: $ft
+  font-size: $fs
   text-align: center
   display: block
   margin: 0 auto
@@ -33,19 +33,41 @@ button
   background-image: url($url)
   background-repeat: no-repeat
   background-size: 100%
-  background-position: center
+  //background-position: center
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
 
 .black-button
   +button(black,white,black,$ft14)
 
 .bg-brick
+  +lay(0,'../assets/background-brick.png')
+.bg-home
+  +lay(0,'../assets/background-home.png')
+.bg-kitchen
+  +lay(10,'../assets/background-kitchen.png')
+  background-position-y: bottom
+.bg-gift1
+  +lay(100,'../assets/gift1.png')
 
-.i-will-join
-  @extend .black-button
+
+.iwilljoin-button
   position: absolute
   left: 0
   right: 0
   bottom: 9.7%
+  z-index: 20
+  button
+    @extend .black-button
+
+.rule-button
+  @extend .black-button
+  font-size: $ft12
+  position: absolute
+  top: 10px
+  right: 10px
 
 .green-button
   background-color: white
