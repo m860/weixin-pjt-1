@@ -14,84 +14,252 @@
     <script src="libs/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-<div class="bg-home"></div>
-<div class="bg-kitchen"></div>
-<button class="rule-button">游戏规则</button>
-<div class="bottom-button-container">
-    <button class="black-button">我要参与</button>
-</div>
-
-<div class="mask" style="display: none">
-    <div class="mask-close-button">x</div>
-    <div class="tab-bar">
-        <div class="bar selected">
-            <a>活动规则</a>
+<!--splash-->
+<div class="page" id="splash" style="display: none">
+    <div class="splash">
+        <div class="splash-content">
+            <img src="assets/logo.png">
+            <img src="assets/sand-glass.png">
+            <p>100%</p>
         </div>
     </div>
-    <div class="tab-content">
-        <div class="tab-content-tag">活动时间</div>
-        <p>2016年12月01日 - 2017年01月01日</p>
-        <div class="tab-content-tag">活动规则</div>
-        <p></p>
-        <div class="tab-content-tag">奖品数量</div>
-        <p>速度快解放开始的减肥快结束的看法就快速点击付款时间到付款即可</p>
-        <div class="tab-content-tag">参与须知</div>
-        <p>水电费水电费</p>
+</div>
+<!--home-->
+<div class="page" id="home" style="display: none">
+    <div class="bg-home"></div>
+    <div class="bg-kitchen"></div>
+    <button class="rule-button" onclick="$('#rule').show()">游戏规则</button>
+    <div class="bottom-button-container">
+        <button class="black-button" onclick="$('#upload').show()">我要参与</button>
+    </div>
+
+    <div class="mask" id="rule" style="display: none">
+        <div class="mask-close-button">x</div>
+        <div class="tab-bar">
+            <div class="bar selected">
+                <a>活动规则</a>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-content-tag">活动时间</div>
+            <p>2016年12月01日 - 2017年01月01日</p>
+            <div class="tab-content-tag">活动规则</div>
+            <p></p>
+            <div class="tab-content-tag">奖品数量</div>
+            <p>速度快解放开始的减肥快结束的看法就快速点击付款时间到付款即可</p>
+            <div class="tab-content-tag">参与须知</div>
+            <p>水电费水电费</p>
+        </div>
+    </div>
+
+    <div class="mask" style="display: none">
+        <div class="bg-gift1">
+            <div class="bottom-button-container2">
+                <button class="white-button">返回</button>
+                <button class="white-button">关注我们</button>
+            </div>
+            <div class="gift-container">
+                <!--<p class="txt1">恭喜你!</p>-->
+                <!--<p class="txt2">你已成功减油<span>1000</span>步</p>-->
+                <!--<p class="txt1">获得养护服务券</p>-->
+                <!--<p class="txt3">恭喜你!</p>-->
+                <!--<p class="txt4">你已成功减油<span>1000</span>步</p>-->
+                <!--<p class="txt3">获得养护服务券</p>-->
+                <p class="txt5">恭喜你!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mask" style="display: none">
+        <div class="tab-bar">
+            <div class="bar selected">
+                <a rel="0">活动规则</a>
+            </div>
+            <div class="bar">
+                <a rel="1">活动规则</a>
+            </div>
+        </div>
+        <div class="tab-content">
+            <p>1. sdfsdfd</p>
+            <p>1. sdfsdfd</p>
+        </div>
+    </div>
+    <div class="mask" style="display: none;" id="upload">
+        <div class="circle-avatar"></div>
+        <div class="circle-music"></div>
+        <div class="photo-container">
+            <div>
+                <div class="photo"></div>
+                <button class="reselect-button">重选</button>
+            </div>
+        </div>
+        <div class="bottom-button-container">
+            <button class="black-button" onclick="$('#loading').show()">确认上传</button>
+        </div>
     </div>
 </div>
-
-<div class="loading" style="display: none">
+<!--result-->
+<div class="page" id="result" style="display: none">
+    <div class="bg-brick">
+        <div class="bg-kitchen">
+            <button class="rule-button">游戏规则</button>
+            <div class="bottom-button-container" >
+                <button class="black-button">帮Ta减油</button>
+            </div>
+            <div class="result-container">
+                <div class="avatar-container"><img></div>
+                <div class="progress">
+                </div>
+                <div><p class="txt1">Ta已减油<span>200</span>步</p></div>
+                <div><p class="txt2">剩余的分享出去邀请好友帮忙减油!</p></div>
+                <button class="green-button">刷&nbsp;&nbsp;新</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page bg-brick" id="friends" style="display: block;">
+    <div class="page-title">- 这些好友为你加油 -</div>
+    <div class="page-content">
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+        <div class="page-content-list-item">
+            <div>
+                <div><img src="assets/left-circle.png"></div>
+                <div class="content">
+                    <div class="name">小乐</div>
+                    <div class="date">12-3 12:30</div>
+                </div>
+                <div class="steps">-50步</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--loading-->
+<div id="loading" class="loading" style="display: none">
     <div class="loading-content">
         <img src="assets/sand-glass.png">
         <p>100%</p>
     </div>
 </div>
 
-<div class="mask" style="display: none">
-    <div class="bg-gift1">
-        <div class="bottom-button-container2">
-            <button class="white-button">返回</button>
-            <button class="white-button">关注我们</button>
-        </div>
-        <div class="gift-container">
-            <!--<p class="txt1">恭喜你!</p>-->
-            <!--<p class="txt2">你已成功减油<span>1000</span>步</p>-->
-            <!--<p class="txt1">获得养护服务券</p>-->
-            <!--<p class="txt3">恭喜你!</p>-->
-            <!--<p class="txt4">你已成功减油<span>1000</span>步</p>-->
-            <!--<p class="txt3">获得养护服务券</p>-->
-            <p class="txt5">恭喜你!</p>
-        </div>
-    </div>
-</div>
-
-<div class="mask" style="display: none">
-    <div class="tab-bar">
-        <div class="bar selected">
-            <a rel="0">活动规则</a>
-        </div>
-        <div class="bar">
-            <a rel="1">活动规则</a>
-        </div>
-    </div>
-    <div class="tab-content">
-        <p>1. sdfsdfd</p>
-        <p>1. sdfsdfd</p>
-    </div>
-</div>
-<div class="mask">
-    <div class="circle-avatar"></div>
-    <div class="circle-music"></div>
-    <div class="photo-container">
-        <div>
-            <div class="photo"></div>
-            <button class="reselect-button">重选</button>
-        </div>
-    </div>
-    <div class="bottom-button-container">
-        <button class="black-button">确认上传</button>
-    </div>
-</div>
 <script src="libs/core.js"></script>
 </body>
 </html>
