@@ -11,6 +11,15 @@ $br-tab-bar: 10px
 $tab-bar-height: 62px
 $tab-bar-mt: 50px
 
+$page-title-height: 60px
+
+$color-orange: orange
+$color-black: black
+$color-white: white
+$color-gray: gray
+$color1: #2cb49b
+$color2: #18b398
+
 html, body
   font-size: 62.5%
   height: 100%
@@ -46,8 +55,27 @@ button
   left: 0
   right: 0
 
+=circle-image($url,$index:20)
+  position: absolute
+  top: 10px
+  border-radius: 50%
+  border: solid 3px $color-black
+  background-image: url($url)
+  background-repeat: no-repeat
+  background-position: center center
+  width: 50px
+  height: 50px
+  z-index: $index
+
+=smooth-scroll()
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+
 .black-button
-  +button(black, white, black, $ft14)
+  +button($color-black, $color-white, $color-black, $ft14)
+
+.green-button
+  +button($color1, $color-white, $color-black, $ft14)
 
 .bg-brick
   +lay(0, '../assets/background-brick.png')
@@ -92,14 +120,14 @@ button
   z-index: 91
   top: 10px
   right: 10px
-  background-color: orange
+  background-color: $color-orange
   border-radius: 50%
-  color: white
+  color: $color-white
   font-size: $ft20
   width: 26px
   height: 26px
   text-align: center
-  border: solid 4px white
+  border: solid 4px $color-white
 
 .loading
   @extend .mask
@@ -114,26 +142,25 @@ button
       width: 50px
       height: 50px
     p
-      color: white
+      color: $color-white
       font-size: $ft16
 
 .tab-bar
   display: inline-block
   width: 100%
   text-align: center
-  border-bottom: solid 1px gray
+  border-bottom: solid 1px $color-gray
   height: $tab-bar-height
   margin: $tab-bar-mt 10px 0 10px
-  //margin: 0 10px 10px 10px
   .bar
     text-align: center
     margin: 0 10px
     display: inline-block
     padding-bottom: 20px
     a
-      color: white
-      border: solid 3px white
-      background-color: orange
+      color: $color-white
+      border: solid 3px $color-white
+      background-color: $color-orange
       font-size: $ft14
       border-radius: $br-tab-bar
       text-align: center
@@ -147,58 +174,56 @@ button
       background-size: 80%
 
 .tab-content
+  +smooth-scroll()
   position: absolute
   top: $tab-bar-height + 10px+$tab-bar-mt
   bottom: 25px
   left: 25px
   right: 25px
-  color: white
+  color: $color-white
   font-size: $ft12
-  overflow: scroll
 
-//old
-.green-button
-  background-color: white
-  border: solid 15px green
-  color: green
-
-.white-button
-  background-color: black
-  border: solid 3px white
-  color: white
-  display: block
-  margin: 15px auto
-  font-size: 1.2rem
-  border-radius: 18px
-  padding: 10px 10px
-  width: 100px
-
-.music-button
-  position: absolute
-  top: 18px
+.circle-music
+  +circle-image('../assets/music.png')
   right: 10px
-  width: 50px
-  height: 50px
-  border-radius: 50%
-  border: solid 3px black
-  background: url('../assets/music.png') no-repeat
   background-size: 70%
-  background-position: center
-  background-color: gray
+  background-color: $color-gray
 
-.logo-button
-  @extend .music-button
+.circle-avatar
+  +circle-image('../assets/left-circle.png')
   left: 10px
-  background: url('../assets/left-circle.png') no-repeat
-  background-position: center
 
-.refresh
-  color: #2cb49b
-  background-color: white
-  border: solid 3px #2cb49b
-  border-radius: 15px
-  padding: 5px 20px
-  font-size: 1.2rem
+.page-title
+  height: $page-title-height
+  line-height: $page-title-height
+  font-size: $ft22
+  text-align: center
+
+.content
+  +smooth-scroll()
+  position: absolute
+  top: $page-title-height
+  bottom: 10px
+  left: 10px
+  right: 10px
+.content-list-item
+  display: table
+  color: $color2
+  font-size: $ft14
+  >div
+    display: table-cell
+    vertical-align: middle
+    >div
+      display: inline-block
+      width: 60%
+      &:first-child
+        text-align: center
+        width: 20%
+      &:last-child
+        text-align: right
+        width: 20%
+        font-size: $ft18
+
 
 
 
