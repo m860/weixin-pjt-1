@@ -357,6 +357,7 @@ button {
   right: 0; }
   .photo-container .gesture {
     background: url("../assets/background-gesture.png") no-repeat;
+    background-position: center;
     position: absolute;
     left: 0;
     right: 0;
