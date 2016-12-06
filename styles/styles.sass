@@ -95,6 +95,11 @@ button
   min-width: 120px
   margin-top: 10px
 
+.reselect-button
+  @extend .black-button
+  margin: 10px 0 0 0
+  font-size: $ft16
+
 .bg-brick
   +lay(0, '../assets/background-brick.png')
   background-size: 100% 100%
@@ -191,7 +196,17 @@ button
   left: 25px
   right: 25px
   color: $color-white
-  font-size: $ft12
+  font-size: $ft14
+  .tab-content-tag
+    display: inline-block
+    background-color: $color-white
+    color: $color-black
+    padding: 5px 10px
+    border-radius: $br-tab-bar - 2px
+    margin: 5px 0
+  p
+    padding-top: 10px
+
 
 .circle-music
   +circle-image('../assets/music.png')
@@ -283,7 +298,7 @@ button
     background-position: center
     background-size: 90%
     height: 80px
-    @media screen and (device-width: 320px)
+    @media screen and (max-device-width: 320px)
       height: 55px
   p.txt1
     color: $color1
@@ -318,6 +333,21 @@ button
   p.txt5
     @extend p.txt1
     color: $color7
+.photo-container
+  position: absolute
+  top: 100px
+  left: 0
+  right: 0
+  >div
+    width: 60%
+    margin: 0 auto
+    .photo
+      height: 300px
+      @media screen and (max-device-width: 320px)
+        height: 250px
+      width: 100%
+      border: solid $border-width black
+      border-radius: $br-button
 
 
 
