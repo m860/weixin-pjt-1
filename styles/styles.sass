@@ -347,15 +347,27 @@ button
     @extend p.txt1
     color: $color7
 .photo-container
+  $photo-container-height: 100px
   position: absolute
-  top: 100px
+  top: $photo-container-height
   left: 0
   right: 0
+  .gesture
+    background: url('../assets/background-gesture.png') no-repeat
+    position: absolute
+    left: 0
+    right: 0
+    height: 100%
+    width: 100%
   >div
     width: 60%
     margin: 0 auto
     .photo
       height: 300px
+      background: url('../assets/default-import.png') no-repeat
+      background-position: center
+      background-color: $color-white
+      background-size: 50%
       @media screen and (max-device-width: 320px)
         height: 250px
       width: 100%

@@ -355,11 +355,22 @@ button {
   top: 100px;
   left: 0;
   right: 0; }
+  .photo-container .gesture {
+    background: url("../assets/background-gesture.png") no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; }
   .photo-container > div {
     width: 60%;
     margin: 0 auto; }
     .photo-container > div .photo {
       height: 300px;
+      background: url("../assets/default-import.png") no-repeat;
+      background-position: center;
+      background-color: white;
+      background-size: 50%;
       width: 100%;
       border: solid 5px black;
       border-radius: 18px; }

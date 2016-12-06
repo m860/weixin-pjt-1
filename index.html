@@ -88,13 +88,14 @@
         <div class="circle-avatar"></div>
         <div class="circle-music"></div>
         <div class="photo-container">
+            <div class="gesture"></div>
             <div>
-                <div class="photo"></div>
-                <button class="reselect-button">重选</button>
+                <div class="photo" onclick="$('.reselect-button').show()"></div>
+                <button class="reselect-button" style="display: none;">重选</button>
             </div>
         </div>
         <div class="bottom-button-container">
-            <button class="black-button" onclick="$('#loading').show()">确认上传</button>
+            <button class="black-button" onclick="$('#loading').show();setTimeout(function(){$('#loading').hide()},1000)">确认上传</button>
         </div>
     </div>
 </div>
