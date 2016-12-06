@@ -41,7 +41,8 @@ button {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  background-size: 100% 100%; }
 
 .bg-home {
   position: absolute;
@@ -81,11 +82,14 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 9.7%;
+  bottom: 8.4%;
   z-index: 20; }
+  .iwilljoin-button button {
+    padding: 10px 20px;
+    font-size: 2.2rem; }
 
 .rule-button {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   position: absolute;
   top: 10px;
   right: 10px; }
@@ -199,31 +203,55 @@ button {
   height: 60px;
   line-height: 60px;
   font-size: 2.2rem;
-  text-align: center; }
+  text-align: center;
+  color: #18b398; }
 
-.content {
+.page-content {
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   position: absolute;
   top: 60px;
-  bottom: 10px;
+  bottom: 0;
   left: 10px;
   right: 10px; }
 
-.content-list-item {
+.page-content-list-item {
   display: table;
   color: #18b398;
-  font-size: 1.4rem; }
-  .content-list-item > div {
+  font-size: 1.6rem;
+  width: 100%;
+  margin: 10px 0; }
+  .page-content-list-item > div {
+    width: 100%;
     display: table-cell;
     vertical-align: middle; }
-    .content-list-item > div > div {
+    .page-content-list-item > div > div {
       display: inline-block;
-      width: 60%; }
-      .content-list-item > div > div:first-child {
+      vertical-align: middle;
+      width: 45%; }
+      .page-content-list-item > div > div img {
+        width: 50px;
+        height: 50px; }
+      .page-content-list-item > div > div:first-child {
         text-align: center;
         width: 20%; }
-      .content-list-item > div > div:last-child {
-        text-align: right;
+      .page-content-list-item > div > div:last-child {
         width: 20%;
-        font-size: 1.8rem; }
+        text-align: right; }
+
+.splash {
+  height: 100%;
+  display: table; }
+  .splash .splash-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .splash .splash-content p {
+      font-size: 1.6rem;
+      color: #00a0e9; }
+    .splash .splash-content img {
+      display: block;
+      margin: 0 auto;
+      width: 10%; }
+      .splash .splash-content img:first-child {
+        width: 60%; }
