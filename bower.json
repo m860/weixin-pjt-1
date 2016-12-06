@@ -1,0 +1,21 @@
+{
+  "name": "weixin-pjt-1",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jean <jean.ma.1986@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/m860/weixin-pjt-1",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

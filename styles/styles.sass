@@ -8,6 +8,9 @@ $ft22: 2.2rem
 $br-button: 18px
 $br-tab-bar: 10px
 
+$tab-bar-height: 62px
+$tab-bar-mt: 50px
+
 html, body
   font-size: 62.5%
   height: 100%
@@ -30,6 +33,7 @@ button
   text-align: center
   display: block
   margin: 0 auto
+
 =lay($index,$url)
   position: absolute
   z-index: $index
@@ -43,18 +47,20 @@ button
   right: 0
 
 .black-button
-  +button(black,white,black,$ft14)
+  +button(black, white, black, $ft14)
 
 .bg-brick
-  +lay(0,'../assets/background-brick.png')
-.bg-home
-  +lay(0,'../assets/background-home.png')
-.bg-kitchen
-  +lay(10,'../assets/background-kitchen.png')
-  background-position-y: bottom
-.bg-gift1
-  +lay(100,'../assets/gift1.png')
+  +lay(0, '../assets/background-brick.png')
 
+.bg-home
+  +lay(0, '../assets/background-home.png')
+
+.bg-kitchen
+  +lay(10, '../assets/background-kitchen.png')
+  background-position-y: bottom
+
+.bg-gift1
+  +lay(100, '../assets/gift1.png')
 
 .iwilljoin-button
   position: absolute
@@ -78,9 +84,14 @@ button
   bottom: 0
   left: 0
   right: 0
-  background-color: rgba(0,0,0,0.7)
+  background-color: rgba(0, 0, 0, 0.7)
   z-index: 90
+
 .mask-close-button
+  position: absolute
+  z-index: 91
+  top: 10px
+  right: 10px
   background-color: orange
   border-radius: 50%
   color: white
@@ -89,14 +100,31 @@ button
   height: 26px
   text-align: center
   border: solid 4px white
-  float: right
-  margin: 10px 10px 0 0
+
+.loading
+  @extend .mask
+  display: table
+  width: 100%
+  height: 100%
+  .loading-content
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+    img
+      width: 50px
+      height: 50px
+    p
+      color: white
+      font-size: $ft16
+
 .tab-bar
   display: inline-block
   width: 100%
   text-align: center
   border-bottom: solid 1px gray
-  margin: 0 10px 10px 10px
+  height: $tab-bar-height
+  margin: $tab-bar-mt 10px 0 10px
+  //margin: 0 10px 10px 10px
   .bar
     text-align: center
     margin: 0 10px
@@ -117,14 +145,17 @@ button
       background-repeat: no-repeat
       background-position: center bottom
       background-size: 80%
+
 .tab-content
-  margin: 0 25px
+  position: absolute
+  top: $tab-bar-height + 10px+$tab-bar-mt
+  bottom: 25px
+  left: 25px
+  right: 25px
   color: white
-  font-size: 1.2rem
-  .title
-    background-color: white
-    color: black
-    border-radius: 10rem
+  font-size: $ft12
+  overflow: scroll
+
 //old
 .green-button
   background-color: white
@@ -142,14 +173,6 @@ button
   padding: 10px 10px
   width: 100px
 
-
-.right-button
-  @extend .black-button
-  position: absolute
-  top: 18px
-  right: 10px
-  font-size: 1rem
-
 .music-button
   position: absolute
   top: 18px
@@ -162,7 +185,6 @@ button
   background-size: 70%
   background-position: center
   background-color: gray
-
 
 .logo-button
   @extend .music-button
@@ -180,19 +202,5 @@ button
 
 
 
-.loading
-  @extend .mask
-  display: table
-  width: 100%
-  height: 100%
-  .loading-content
-    display: table-cell
-    vertical-align: middle
-    text-align: center
-    img
-      width: 50px
-      height: 50px
-    p
-      color: white
-      font-size: $ft16
+
 
