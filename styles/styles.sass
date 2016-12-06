@@ -30,6 +30,14 @@ $color5: #e01233
 $color6: #eb7a46
 $color7: #c5a05d
 
+@keyframes rotate
+  from
+    transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
 html, body
   font-size: 62.5%
   height: 100%
@@ -213,6 +221,8 @@ button
   right: 10px
   background-size: 70%
   background-color: $color-gray
+  animation: rotate 1s linear infinite
+  -webkit-animation: rotate 1s linear infinite
 
 .circle-avatar
   +circle-image('../assets/left-circle.png')
