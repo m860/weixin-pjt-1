@@ -10,27 +10,43 @@ p {
 button {
   outline: none; }
 
-.black-button, .iwilljoin-button button, .rule-button {
+.black-button, .rule-button {
   border: solid 5px black;
   border-radius: 18px;
   padding: 5px 10px;
   color: black;
   background-color: white;
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   text-align: center;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 5px 20px;
+  margin-top: 5px; }
 
 .green-button {
   border: solid 5px #2cb49b;
   border-radius: 18px;
   padding: 5px 10px;
   color: black;
-  background-color: white;
-  font-size: 1.4rem;
+  background-color: #feffff;
+  font-size: 1.8rem;
   text-align: center;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 5px 20px; }
+
+.white-button {
+  border: solid 5px white;
+  border-radius: 18px;
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  font-size: 1.8rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  min-width: 120px;
+  margin-top: 10px; }
 
 .bg-brick {
   position: absolute;
@@ -78,16 +94,6 @@ button {
   left: 0;
   right: 0; }
 
-.iwilljoin-button {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 8.4%;
-  z-index: 20; }
-  .iwilljoin-button button {
-    padding: 10px 20px;
-    font-size: 2.2rem; }
-
 .rule-button {
   font-size: 1.4rem;
   position: absolute;
@@ -115,7 +121,7 @@ button {
   width: 26px;
   height: 26px;
   text-align: center;
-  border: solid 4px white; }
+  border: solid 5px white; }
 
 .loading {
   display: table;
@@ -146,7 +152,7 @@ button {
     padding-bottom: 20px; }
     .tab-bar .bar a {
       color: white;
-      border: solid 3px white;
+      border: solid 5px white;
       background-color: orange;
       font-size: 1.4rem;
       border-radius: 10px;
@@ -175,7 +181,7 @@ button {
   position: absolute;
   top: 10px;
   border-radius: 50%;
-  border: solid 3px black;
+  border: solid 5px black;
   background-image: url("../assets/music.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -190,7 +196,7 @@ button {
   position: absolute;
   top: 10px;
   border-radius: 50%;
-  border: solid 3px black;
+  border: solid 5px black;
   background-image: url("../assets/left-circle.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -255,3 +261,63 @@ button {
       width: 10%; }
       .splash .splash-content img:first-child {
         width: 60%; }
+
+.bottom-button-container, .bottom-button-container2 {
+  position: absolute;
+  bottom: 8.4%;
+  text-align: center;
+  width: 100%;
+  z-index: 30; }
+
+.bottom-button-container2 {
+  bottom: 20px; }
+
+.result-container {
+  height: 70%;
+  text-align: center; }
+  .result-container .avatar-container {
+    width: 33%;
+    height: 150px;
+    border: solid 5px black;
+    border-radius: 18px;
+    margin: 60px auto 0 auto;
+    overflow: hidden; }
+  .result-container .progress {
+    background: url("../assets/progress.png") no-repeat;
+    background-position: center;
+    background-size: 90%;
+    height: 80px; }
+    @media screen and (device-width: 320px) {
+      .result-container .progress {
+        height: 55px; } }
+  .result-container p.txt1, .result-container .gift-container p.txt3, .gift-container .result-container p.txt3, .result-container .gift-container p.txt5, .gift-container .result-container p.txt5 {
+    color: #2cb49b;
+    padding: 10px 0;
+    font-size: 1.8rem; }
+    .result-container p.txt1 span, .result-container .gift-container p.txt3 span, .gift-container .result-container p.txt3 span, .result-container .gift-container p.txt5 span, .gift-container .result-container p.txt5 span {
+      font-size: 2rem; }
+  .result-container p.txt2, .result-container .gift-container p.txt4, .gift-container .result-container p.txt4 {
+    padding: 10px 0;
+    font-size: 1.6rem; }
+
+.gift-container {
+  position: absolute;
+  top: 50%;
+  width: 100%; }
+  .gift-container p {
+    text-align: center;
+    margin: 5px 0; }
+  .gift-container p.txt1, .gift-container p.txt3, .gift-container p.txt5 {
+    color: #e01233;
+    font-size: 2.6rem; }
+  .gift-container p.txt2, .gift-container p.txt4 {
+    color: #e01233;
+    font-size: 2rem; }
+    .gift-container p.txt2 span, .gift-container p.txt4 span {
+      font-size: 2.6rem; }
+  .gift-container p.txt3 {
+    color: #eb7a46; }
+  .gift-container p.txt4 {
+    color: #eb7a46; }
+  .gift-container p.txt5 {
+    color: #c5a05d; }

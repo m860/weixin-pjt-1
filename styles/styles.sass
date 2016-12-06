@@ -4,9 +4,14 @@ $ft16: 1.6rem
 $ft18: 1.8rem
 $ft20: 2rem
 $ft22: 2.2rem
+$ft24: 2.4rem
+$ft26: 2.6rem
 
 $br-button: 18px
 $br-tab-bar: 10px
+$border-width: 5px
+
+$button-width: 100px
 
 $tab-bar-height: 62px
 $tab-bar-mt: 50px
@@ -20,6 +25,10 @@ $color-gray: gray
 $color1: #2cb49b
 $color2: #18b398
 $color3: #00a0e9
+$color4: #feffff
+$color5: #e01233
+$color6: #eb7a46
+$color7: #c5a05d
 
 html, body
   font-size: 62.5%
@@ -34,7 +43,7 @@ button
   outline: none
 
 =button($borderColor,$bgColor,$color,$fs)
-  border: solid 5px $borderColor
+  border: solid $border-width $borderColor
   border-radius: $br-button
   padding: 5px 10px
   color: $color
@@ -60,7 +69,7 @@ button
   position: absolute
   top: 10px
   border-radius: 50%
-  border: solid 3px $color-black
+  border: solid $border-width $color-black
   background-image: url($url)
   background-repeat: no-repeat
   background-position: center center
@@ -73,10 +82,18 @@ button
   -webkit-overflow-scrolling: touch
 
 .black-button
-  +button($color-black, $color-white, $color-black, $ft14)
+  +button($color-black, $color-white, $color-black, $ft22)
+  padding: 5px 20px
+  margin-top: 5px
 
 .green-button
-  +button($color1, $color-white, $color-black, $ft14)
+  +button($color1, $color4, $color-black, $ft18)
+  padding: 5px 20px
+
+.white-button
+  +button($color-white,$color-black,$color-white,$ft18)
+  min-width: 120px
+  margin-top: 10px
 
 .bg-brick
   +lay(0, '../assets/background-brick.png')
@@ -91,17 +108,6 @@ button
 
 .bg-gift1
   +lay(100, '../assets/gift1.png')
-
-.iwilljoin-button
-  position: absolute
-  left: 0
-  right: 0
-  bottom: 8.4%
-  z-index: 20
-  button
-    @extend .black-button
-    padding: 10px 20px
-    font-size: $ft22
 
 .rule-button
   @extend .black-button
@@ -131,7 +137,7 @@ button
   width: 26px
   height: 26px
   text-align: center
-  border: solid 4px $color-white
+  border: solid $border-width $color-white
 
 .loading
   @extend .mask
@@ -163,7 +169,7 @@ button
     padding-bottom: 20px
     a
       color: $color-white
-      border: solid 3px $color-white
+      border: solid $border-width $color-white
       background-color: $color-orange
       font-size: $ft14
       border-radius: $br-tab-bar
@@ -251,6 +257,69 @@ button
       width: 10%
       &:first-child
         width: 60%
+
+.bottom-button-container
+  position: absolute
+  bottom: 8.4%
+  text-align: center
+  width: 100%
+  z-index: 30
+.bottom-button-container2
+  @extend .bottom-button-container
+  bottom: 20px
+
+.result-container
+  height: 70%
+  text-align: center
+  .avatar-container
+    width: 33%
+    height: 150px
+    border: solid $border-width $color-black
+    border-radius: $br-button
+    margin: 60px auto 0 auto
+    overflow: hidden
+  .progress
+    background: url('../assets/progress.png') no-repeat
+    background-position: center
+    background-size: 90%
+    height: 80px
+    @media screen and (device-width: 320px)
+      height: 55px
+  p.txt1
+    color: $color1
+    padding: 10px 0
+    font-size: $ft18
+    span
+      font-size: $ft20
+  p.txt2
+    padding: 10px 0
+    font-size: $ft16
+.gift-container
+  position: absolute
+  top: 50%
+  width: 100%
+  p
+    text-align: center
+    margin: 5px 0
+  p.txt1
+    color: $color5
+    font-size: $ft26
+  p.txt2
+    color: $color5
+    font-size: $ft20
+    span
+      font-size: $ft26
+  p.txt3
+    @extend p.txt1
+    color: $color6
+  p.txt4
+    @extend p.txt2
+    color: $color6
+  p.txt5
+    @extend p.txt1
+    color: $color7
+
+
 
 
 
