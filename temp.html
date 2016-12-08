@@ -3,17 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <style>
+        html,body{
+            height:100%;
+            font-size: 62.5%;
+        }
         .gift-wrapper{
-            display: table;
-            width: 100%;
-            height: 100%;
             background-color: rgba(0,0,0,0.8);
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            padding: 10px;
+
+
+        }
+        .gift-wrapper .gift-buttons{
+            margin: 10px;
+        }
+        .gift-wrapper .gift-buttons button{
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.4rem;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+        .gift-wrapper .gift-buttons .btn1{
+            background-color: #1ca9ea;
+        }
+        .gift-wrapper .gift-buttons .btn2{
+            background-color: gray;
         }
         .gift-wrapper .gift-content{
-            display: table-cell;
-            vertical-align: middle;
-
+            -webkit-flex: 1;
+            flex:1;
+            -webkit-jusitify-content:center;
+            justify-content: center;
+            border:solid 2px #56212c;
+            border-radius: 10px;
+            width:200px;
+            margin: 0 auto;
+            padding:0 10px
         }
         .gift-wrapper .gift-content p{
             font-size: 1.4rem;
@@ -29,6 +61,10 @@
 </head>
 <body>
 <div class="gift-wrapper">
+    <div class="gift-buttons">
+        <button class="btn1">sdf</button>
+        <button class="btn2">sdf</button>
+    </div>
     <div class="gift-content">
         <p class="gift-title">获奖奖品</p>
         <p>1.sa</p>
