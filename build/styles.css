@@ -209,7 +209,8 @@ button {
       text-align: center;
       display: -webkit-flex;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      width: 100%; }
       .tab-content .my-prize-wrapper.form button {
         margin: 0 auto;
         background-color: orange;
