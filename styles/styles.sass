@@ -213,10 +213,13 @@ button
   color: $color-white
   font-size: $ft14
   .my-prize-wrapper
-    width: 70%
+    width: 80%
     margin: 0 auto
     &.form
       text-align: center
+      display: -webkit-flex
+      display: flex
+      flex-direction: column
       button
         margin: 0 auto
         background-color: orange
@@ -231,7 +234,11 @@ button
         padding: 5px 5px
         border-radius: 20px
         display: inline-block
-        width: 100%
+        flex: 1
+        display: -webkit-flex
+        display: flex
+        justify-content: center
+        align-items: center
         margin-top: 10px
       input
         background-color: rgb(255, 222, 182)
@@ -239,7 +246,10 @@ button
         border-radius: 20px
         outline: none
         padding: 5px 2px
+        flex: 1
         //color: rgb(255,239,166)
+      label
+        display: table-cell
     &.border
       border: solid 2px orange
       padding: 20px

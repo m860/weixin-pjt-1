@@ -203,10 +203,13 @@ button {
   color: white;
   font-size: 1.4rem; }
   .tab-content .my-prize-wrapper {
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
     .tab-content .my-prize-wrapper.form {
-      text-align: center; }
+      text-align: center;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column; }
       .tab-content .my-prize-wrapper.form button {
         margin: 0 auto;
         background-color: orange;
@@ -220,14 +223,21 @@ button {
         padding: 5px 5px;
         border-radius: 20px;
         display: inline-block;
-        width: 100%;
+        flex: 1;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 10px; }
       .tab-content .my-prize-wrapper.form input {
         background-color: #ffdeb6;
         border: none;
         border-radius: 20px;
         outline: none;
-        padding: 5px 2px; }
+        padding: 5px 2px;
+        flex: 1; }
+      .tab-content .my-prize-wrapper.form label {
+        display: table-cell; }
     .tab-content .my-prize-wrapper.border {
       border: solid 2px orange;
       padding: 20px;
