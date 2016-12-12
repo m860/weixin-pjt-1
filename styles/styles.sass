@@ -8,7 +8,7 @@ $ft24: 2.4rem
 $ft26: 2.6rem
 
 $br-button: 18px
-$br-tab-bar: 10px
+$br-tab-bar: 24px
 $border-width: 5px
 
 $button-width: 100px
@@ -22,6 +22,7 @@ $color-orange: orange
 $color-black: black
 $color-white: white
 $color-gray: gray
+$color-red: red
 $color1: #2cb49b
 $color2: #18b398
 $color3: #00a0e9
@@ -99,7 +100,12 @@ button
   padding: 5px 20px
 
 .white-button
-  +button($color-white,$color-black,$color-white,$ft18)
+  +button($color-white, $color-black, $color-white, $ft18)
+  min-width: 120px
+  margin-top: 10px
+
+.blue-button
+  +button(#116db7, #22a0e9, $color-white, $ft18)
   min-width: 120px
   margin-top: 10px
 
@@ -173,14 +179,14 @@ button
   display: inline-block
   width: 100%
   text-align: center
-  border-bottom: solid 1px $color-gray
+  border-bottom: solid 1px $color-white
   height: $tab-bar-height
-  margin: $tab-bar-mt 10px 0 10px
+  margin: $tab-bar-mt 10px 0px 10px
   .bar
     text-align: center
     margin: 0 10px
     display: inline-block
-    padding-bottom: 20px
+    padding-bottom: 16px
     a
       color: $color-white
       border: solid $border-width $color-white
@@ -206,16 +212,56 @@ button
   right: 25px
   color: $color-white
   font-size: $ft14
+  .my-prize-wrapper
+    width: 70%
+    margin: 0 auto
+    &.form
+      text-align: center
+      button
+        margin: 0 auto
+        background-color: orange
+        border: none
+        color: white
+        border-radius: 20px
+        padding: 10px 15px
+        margin-top: 10px
+
+      > div
+        background-color: orange
+        padding: 5px 5px
+        border-radius: 20px
+        display: inline-block
+        width: 100%
+        margin-top: 10px
+      input
+        background-color: rgb(255, 222, 182)
+        border: none
+        border-radius: 20px
+        outline: none
+        padding: 5px 2px
+        //color: rgb(255,239,166)
+    &.border
+      border: solid 2px orange
+      padding: 20px
+      border-radius: 10px
+      margin-top: 20px
+      .title
+        font-size: $ft22
+        padding: 5px
+        text-align: center
+        //margin: 0 20px
+        border-bottom: solid 2px $color-white
   .tab-content-tag
     display: inline-block
     background-color: $color-white
     color: $color-black
     padding: 5px 10px
     border-radius: $br-tab-bar - 2px
-    margin: 5px 0
+    margin: 15px 0
   p
     padding-top: 10px
-
+    &.note
+      color: $color-red
 
 .circle-music
   +circle-image('../assets/music.png')
@@ -228,9 +274,11 @@ button
 .circle-avatar
   +circle-image('../assets/left-circle.png')
   left: 10px
+
 .page
   height: 100%
   overflow: hidden
+
 .page-title
   height: $page-title-height
   line-height: $page-title-height
@@ -245,17 +293,18 @@ button
   bottom: 0
   left: 10px
   right: 10px
+
 .page-content-list-item
   display: table
   color: $color2
   font-size: $ft16
   width: 100%
   margin: 10px 0
-  >div
+  > div
     width: 100%
     display: table-cell
     vertical-align: middle
-    >div
+    > div
       display: inline-block
       vertical-align: middle
       width: 45%
@@ -292,6 +341,7 @@ button
   text-align: center
   width: 100%
   z-index: 30
+
 .bottom-button-container2
   @extend .bottom-button-container
   bottom: 20px
@@ -322,6 +372,7 @@ button
   p.txt2
     padding: 10px 0
     font-size: $ft16
+
 .gift-container
   position: absolute
   top: 50%
@@ -346,6 +397,7 @@ button
   p.txt5
     @extend p.txt1
     color: $color7
+
 .photo-container
   $photo-container-height: 100px
   position: absolute
@@ -361,7 +413,7 @@ button
     height: 100%
     width: 100%
 
-  >div
+  > div
     width: 60%
     margin: 0 auto
     .photo

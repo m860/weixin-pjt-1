@@ -56,6 +56,19 @@ button {
   min-width: 120px;
   margin-top: 10px; }
 
+.blue-button {
+  border: solid 5px #116db7;
+  border-radius: 18px;
+  padding: 5px 10px;
+  color: white;
+  background-color: #22a0e9;
+  font-size: 1.8rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  min-width: 120px;
+  margin-top: 10px; }
+
 .reselect-button {
   margin: 10px 0 0 0;
   font-size: 1.6rem; }
@@ -155,20 +168,20 @@ button {
   display: inline-block;
   width: 100%;
   text-align: center;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px white;
   height: 62px;
-  margin: 50px 10px 0 10px; }
+  margin: 50px 10px 0px 10px; }
   .tab-bar .bar {
     text-align: center;
     margin: 0 10px;
     display: inline-block;
-    padding-bottom: 20px; }
+    padding-bottom: 16px; }
     .tab-bar .bar a {
       color: white;
       border: solid 5px white;
       background-color: orange;
       font-size: 1.4rem;
-      border-radius: 10px;
+      border-radius: 24px;
       text-align: center;
       padding: 10px;
       width: 100px;
@@ -189,15 +202,53 @@ button {
   right: 25px;
   color: white;
   font-size: 1.4rem; }
+  .tab-content .my-prize-wrapper {
+    width: 70%;
+    margin: 0 auto; }
+    .tab-content .my-prize-wrapper.form {
+      text-align: center; }
+      .tab-content .my-prize-wrapper.form button {
+        margin: 0 auto;
+        background-color: orange;
+        border: none;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 15px;
+        margin-top: 10px; }
+      .tab-content .my-prize-wrapper.form > div {
+        background-color: orange;
+        padding: 5px 5px;
+        border-radius: 20px;
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px; }
+      .tab-content .my-prize-wrapper.form input {
+        background-color: #ffdeb6;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        padding: 5px 2px; }
+    .tab-content .my-prize-wrapper.border {
+      border: solid 2px orange;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px; }
+      .tab-content .my-prize-wrapper.border .title {
+        font-size: 2.2rem;
+        padding: 5px;
+        text-align: center;
+        border-bottom: solid 2px white; }
   .tab-content .tab-content-tag {
     display: inline-block;
     background-color: white;
     color: black;
     padding: 5px 10px;
-    border-radius: 8px;
-    margin: 5px 0; }
+    border-radius: 22px;
+    margin: 15px 0; }
   .tab-content p {
     padding-top: 10px; }
+    .tab-content p.note {
+      color: red; }
 
 .circle-music {
   position: absolute;
