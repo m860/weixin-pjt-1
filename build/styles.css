@@ -429,3 +429,8 @@ button {
       @media screen and (max-device-width: 320px) {
         .photo-container > div .photo {
           height: 250px; } }
+
+#friends {
+  top: 100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s; }

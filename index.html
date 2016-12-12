@@ -15,7 +15,7 @@
 </head>
 <body>
 <!--splash-->
-<div class="page" id="splash" style="display: none">
+<div class="page" id="splash" style="display:none ">
     <div class="splash">
         <div class="splash-content">
             <img src="assets/logo.png">
@@ -25,7 +25,7 @@
     </div>
 </div>
 <!--home-->
-<div class="page" id="home" style="display: block">
+<div class="page" id="home" style="display: none">
     <div class="bg-home"></div>
     <div class="bg-kitchen"></div>
     <button class="rule-button" onclick="$('#rule').show()">游戏规则</button>
@@ -52,61 +52,25 @@
         </div>
     </div>
 
-    <div class="mask" style="display: block">
+    <div class="mask" style="display: none">
         <div class="bg-gift1">
             <div class="bottom-button-container2">
                 <button class="blue-button">返回</button>
                 <button class="blue-button">关注我们</button>
             </div>
             <div class="gift-container">
-                <!--<p class="txt1">恭喜你!</p>-->
-                <!--<p class="txt2">你已成功减油<span>1000</span>步</p>-->
-                <!--<p class="txt1">获得养护服务券</p>-->
+                <p class="txt1">恭喜你!</p>
+                <p class="txt2">你已成功减油<span>1000</span>步</p>
+                <p class="txt1">获得养护服务券</p>
                 <!--<p class="txt3">恭喜你!</p>-->
                 <!--<p class="txt4">你已成功减油<span>1000</span>步</p>-->
                 <!--<p class="txt3">获得养护服务券</p>-->
-                <p class="txt5">恭喜你!</p>
+                <!--<p class="txt5">恭喜你!</p>-->
             </div>
         </div>
     </div>
 
-    <div class="mask" style="display: none">
-        <div class="tab-bar">
-            <div class="bar selected">
-                <a rel="0">活动规则</a>
-            </div>
-            <div class="bar">
-                <a rel="1">我的奖品</a>
-            </div>
-        </div>
-        <div class="tab-content" >
-            <div class="tab-content-tag">地区限制</div>
-            <p>1. sdfsdfd</p>
-            <p>1. sdfsdfd</p>
-            <p class="note">注意</p>
-            <p class="note">获得都是发生地方就是的房价快速的减肥</p>
-            <div class="tab-content-tag">奖品领取及使用</div>
-        </div>
-        <div class="tab-content" style="display: none">
-            <div class="my-prize-wrapper border">
-                <p class="title">获奖奖品</p>
-                <p>600步:是打开飞机开始的减肥</p>
-                <p>600步:是打开飞机开始的减肥</p>
-                <p>600步:是打开飞机开始的减肥</p>
-            </div>
-            <div class="my-prize-wrapper form">
-                <div>
-                    <label>电话:</label>
-                    <input>
-                </div>
-                <div>
-                    <label>电话:</label>
-                    <input>
-                </div>
-                    <button>确认提交</button>
-            </div>
-        </div>
-    </div>
+
     <div class="mask" style="display: none;" id="upload">
         <div class="circle-avatar"></div>
         <div class="circle-music"></div>
@@ -126,12 +90,13 @@
     </div>
 </div>
 <!--result-->
-<div class="page" id="result" style="display: none">
+<div class="page" id="result" style="display:block" onclick="$('#friends').css({top:'0'})">
     <div class="bg-brick">
         <div class="bg-kitchen">
-            <button class="rule-button">游戏规则</button>
+            <button class="rule-button" onclick="$('#guide').show()">游戏规则</button>
             <div class="bottom-button-container">
                 <button class="black-button">帮Ta减油</button>
+                <button id="bottom-arrow">xia</button>
             </div>
             <div class="result-container">
                 <div class="avatar-container"><img></div>
@@ -144,7 +109,7 @@
         </div>
     </div>
 </div>
-<div class="page bg-brick" id="friends" style="display: none;">
+<div class="page bg-brick" id="friends" style="top:100%">
     <div class="page-title">- 这些好友为你加油 -</div>
     <div class="page-content">
         <div class="page-content-list-item">
@@ -286,7 +251,43 @@
         <p>100%</p>
     </div>
 </div>
-
+<div class="mask" id="guide" style="display: none">
+    <div class="tab-bar">
+        <div class="bar selected">
+            <a rel="0">活动规则</a>
+        </div>
+        <div class="bar">
+            <a rel="1">我的奖品</a>
+        </div>
+    </div>
+    <div class="tab-content" >
+        <div class="tab-content-tag">地区限制</div>
+        <p>1. sdfsdfd</p>
+        <p>1. sdfsdfd</p>
+        <p class="note">注意</p>
+        <p class="note">获得都是发生地方就是的房价快速的减肥</p>
+        <div class="tab-content-tag">奖品领取及使用</div>
+    </div>
+    <div class="tab-content" style="display: none">
+        <div class="my-prize-wrapper border">
+            <p class="title">获奖奖品</p>
+            <p>600步:是打开飞机开始的减肥</p>
+            <p>600步:是打开飞机开始的减肥</p>
+            <p>600步:是打开飞机开始的减肥</p>
+        </div>
+        <div class="my-prize-wrapper form">
+            <div>
+                <label>电话:</label>
+                <input>
+            </div>
+            <div>
+                <label>电话:</label>
+                <input>
+            </div>
+            <button>确认提交</button>
+        </div>
+    </div>
+</div>
 <script src="libs/core.js"></script>
 <script>
     /*
