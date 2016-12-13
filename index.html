@@ -25,7 +25,7 @@
     </div>
 </div>
 <!--home-->
-<div class="page" id="home" style="display: block">
+<div class="page" id="home" style="display: none">
     <div class="bg-home"></div>
     <div class="bg-kitchen"></div>
     <button class="rule-button" onclick="$('#rule').show()">游戏规则</button>
@@ -90,22 +90,27 @@
     </div>
 </div>
 <!--result-->
-<div class="page" id="result" style="display:none" onclick="$('#friends').css({top:'0'})">
+<div class="page" id="result" style="display:block" onclick="$('#friends').css({top:'0'})">
     <div class="bg-brick">
         <div class="bg-kitchen">
             <button class="rule-button" onclick="$('#guide').show()">游戏规则</button>
             <div class="bottom-button-container" style="bottom:3%">
                 <button class="black-button">帮Ta减油</button>
-                <img id="bottom-arrow" src="assets/bottom-arrow.png" style="margin-top: 5px" onclick="$('#friends').css('top','0')">
+                <img id="bottom-arrow" src="assets/bottom-arrow.png" style="margin-top: 5px;width:50px;margin-top: 10px;" onclick="$('#friends').css('top','0')">
             </div>
 
             <div class="result-container">
                 <div class="avatar-container"><img></div>
+                <div>
+                    <p class="txt2" style="padding-bottom:0">目标1000步</p>
+                </div>
                 <div class="progress">
                 </div>
-                <div><p class="txt1">Ta已减油<span>200</span>步</p></div>
-                <div><p class="txt2">剩余的分享出去邀请好友帮忙减油!</p></div>
-                <button class="black-button">刷&nbsp;&nbsp;新</button>
+                <!--<div><p class="txt1">Ta已减油<span>200</span>步</p></div>-->
+                <p class="txt1"><img src="assets/left-circle.png" style="width:30px; vertical-align: middle;margin-right: 5px;">小乐邀请您帮忙去油</p>
+                <div><p class="txt1">Ta已减油<span>200</span>步,还剩<span>100</span>步</p></div>
+                <!--<div><p class="txt2">剩余的分享出去邀请好友帮忙减油!</p></div>-->
+                <!--<button class="black-button">刷&nbsp;&nbsp;新</button>-->
             </div>
         </div>
     </div>

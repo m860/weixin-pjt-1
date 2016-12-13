@@ -366,8 +366,8 @@ button {
   height: 70%;
   text-align: center; }
   .result-container .avatar-container {
-    width: 33%;
-    height: 150px;
+    width: 58%;
+    height: 250px;
     border: solid 5px black;
     border-radius: 18px;
     margin: 60px auto 0 auto;
@@ -376,12 +376,12 @@ button {
     background: url("../assets/progress.png") no-repeat;
     background-position: center;
     background-size: 90%;
-    height: 80px; }
+    height: 63px; }
     @media screen and (max-device-width: 320px) {
       .result-container .progress {
         height: 55px; } }
   .result-container p.txt1, .result-container .gift-container p.txt3, .gift-container .result-container p.txt3, .result-container .gift-container p.txt5, .gift-container .result-container p.txt5 {
-    color: #2cb49b;
+    color: black;
     padding: 10px 0;
     font-size: 1.8rem; }
     .result-container p.txt1 span, .result-container .gift-container p.txt3 span, .gift-container .result-container p.txt3 span, .result-container .gift-container p.txt5 span, .gift-container .result-container p.txt5 span {
