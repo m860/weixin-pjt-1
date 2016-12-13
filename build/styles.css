@@ -366,12 +366,16 @@ button {
   height: 70%;
   text-align: center; }
   .result-container .avatar-container {
-    width: 58%;
     height: 250px;
+    width: 50%;
     border: solid 5px black;
     border-radius: 18px;
     margin: 60px auto 0 auto;
     overflow: hidden; }
+    @media screen and (max-device-width: 320px) {
+      .result-container .avatar-container {
+        width: 33%;
+        height: 150px; } }
   .result-container .progress {
     background: url("../assets/progress.png") no-repeat;
     background-position: center;

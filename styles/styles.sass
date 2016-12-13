@@ -361,8 +361,11 @@ button
   height: 70%
   text-align: center
   .avatar-container
-    width: 58%
     height: 250px
+    width: 50%
+    @media screen and (max-device-width: 320px)
+      width: 33%
+      height: 150px
     border: solid $border-width $color-black
     border-radius: $br-button
     margin: 60px auto 0 auto
