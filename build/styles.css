@@ -19,11 +19,11 @@ button {
   outline: none; }
 
 .black-button, .reselect-button, .rule-button {
-  border: solid 5px black;
+  border: solid 5px #226ac5;
   border-radius: 18px;
   padding: 5px 10px;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #2aa4e7;
   font-size: 2.2rem;
   text-align: center;
   display: block;
@@ -140,14 +140,14 @@ button {
   z-index: 91;
   top: 10px;
   right: 10px;
-  background-color: orange;
+  background-color: #2aa4e7;
   border-radius: 50%;
   color: white;
   font-size: 2rem;
   width: 26px;
   height: 26px;
   text-align: center;
-  border: solid 5px white; }
+  border: solid 5px #226ac5; }
 
 .loading {
   display: table;
@@ -178,8 +178,8 @@ button {
     padding-bottom: 16px; }
     .tab-bar .bar a {
       color: white;
-      border: solid 5px white;
-      background-color: orange;
+      border: solid 5px #226ac5;
+      background-color: #2aa4e7;
       font-size: 1.4rem;
       border-radius: 24px;
       text-align: center;
