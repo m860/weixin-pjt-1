@@ -6,6 +6,14 @@
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg); } }
 
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+
 html, body {
   font-size: 62.5%;
   height: 100%;
