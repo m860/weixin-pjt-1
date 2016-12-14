@@ -374,8 +374,8 @@ button {
     overflow: hidden; }
     @media screen and (max-device-width: 320px) {
       .result-container .avatar-container {
-        width: 33%;
-        height: 150px; } }
+        width: 50%;
+        height: 200px; } }
   .result-container .progress {
     background: url("../assets/progress.png") no-repeat;
     background-position: center;
@@ -388,6 +388,9 @@ button {
     color: black;
     padding: 10px 0;
     font-size: 1.8rem; }
+    @media screen and (max-device-width: 320px) {
+      .result-container p.txt1, .result-container .gift-container p.txt3, .gift-container .result-container p.txt3, .result-container .gift-container p.txt5, .gift-container .result-container p.txt5 {
+        padding: 0; } }
     .result-container p.txt1 span, .result-container .gift-container p.txt3 span, .gift-container .result-container p.txt3 span, .result-container .gift-container p.txt5 span, .gift-container .result-container p.txt5 span {
       font-size: 2rem; }
   .result-container p.txt2, .result-container .gift-container p.txt4, .gift-container .result-container p.txt4 {
