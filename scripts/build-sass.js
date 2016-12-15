@@ -5,6 +5,8 @@ var watch = require("node-watch");
 var path = require("path");
 var sass = require("node-sass");
 var fs = require("fs");
+var autoprefixer = require('autoprefixer');
+var postcss      = require('postcss');
 
 watchFolder = path.normalize(path.join(__dirname, '../styles/'));
 
@@ -29,11 +31,17 @@ watch(watchFolder, filter(/\.sass$/i, function (filename) {
 		//,outputStyle: 'compressed'
 	}, function (err, result) {
 		if (!err) {
-			fs.writeFile(newFilename, result.css, function (err2) {
-				if (!err2) {
-					console.log(filename + 'is builded');
-				}
-			});
+			postcss([autoprefixer]).process(result.css).then(function (result2) {
+				result2.warnings().forEach(function (warn) {
+					console.warn(warn.toString());
+				});
+				fs.writeFile(newFilename, result2.css, function (err2) {
+					if (!err2) {
+						console.log(filename + ' is builded');
+					}
+				});
+			})
+
 		}
 		else {
 			console.error(err);

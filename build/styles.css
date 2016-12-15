@@ -1,18 +1,18 @@
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
-
 @-webkit-keyframes rotate {
   from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 html, body {
   font-size: 62.5%;
@@ -202,7 +202,7 @@ button {
 
 .tab-content {
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   position: absolute;
   top: 122px;
   bottom: 25px;
@@ -215,9 +215,13 @@ button {
     margin: 0 auto; }
     .tab-content .my-prize-wrapper.form {
       text-align: center;
-      display: -webkit-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 100%; }
       .tab-content .my-prize-wrapper.form button {
         margin: 0 auto;
@@ -232,11 +236,18 @@ button {
         padding: 5px 5px;
         border-radius: 20px;
         display: inline-block;
-        flex: 1;
-        display: -webkit-flex;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-top: 10px; }
       .tab-content .my-prize-wrapper.form input {
         background-color: #ffdeb6;
@@ -244,7 +255,9 @@ button {
         border-radius: 20px;
         outline: none;
         padding: 5px 2px;
-        flex: 1; }
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
       .tab-content .my-prize-wrapper.form label {
         display: table-cell; }
     .tab-content .my-prize-wrapper.border {
@@ -283,8 +296,8 @@ button {
   right: 10px;
   background-size: 70%;
   background-color: gray;
-  animation: rotate 1s linear infinite;
-  -webkit-animation: rotate 1s linear infinite; }
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite; }
 
 .circle-avatar {
   position: absolute;
@@ -312,7 +325,7 @@ button {
 
 .page-content {
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   position: absolute;
   top: 60px;
   bottom: 0;
@@ -458,5 +471,5 @@ button {
 
 #friends {
   top: 100%;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s; }
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
