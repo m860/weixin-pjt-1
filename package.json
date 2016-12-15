@@ -7,14 +7,16 @@
     "node-sass": "^3.13.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.4",
     "livereload": "^0.6.0",
     "node-sass": "^3.13.0",
-    "node-watch": "^0.4.1"
+    "node-watch": "^0.4.1",
+    "postcss": "^5.2.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-sass": "node scripts/build-sass.js",
-    "livereload":"node node_modules/livereload/bin/livereload.js"
+    "livereload": "node node_modules/livereload/bin/livereload.js"
   },
   "repository": {
     "type": "git",
